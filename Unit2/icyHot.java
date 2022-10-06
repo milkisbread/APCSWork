@@ -2,12 +2,12 @@ public class icyHot
 {
   public static void testicyHot(int temp1, int temp2, boolean expected){
     boolean result = icyhot(temp1, temp2);
-    System.out.println("temp1:" + temp1 + "temp2:" + temp2 + "expected" + expected + "result" + result);
+    System.out.print(" temp1: " + temp1 + " temp2: " + temp2 + " expected: " + expected + " result: " + result);
 
     if(result == expected){
-      System.out.println("ICYHOT!!");
+      System.out.println(" ICYHOT!!");
     }else{
-      System.out.println("not icyhot...");
+      System.out.println(" not icyhot...");
     }
   }
   public static boolean icyhot(int temp1, int temp2)
