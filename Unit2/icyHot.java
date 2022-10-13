@@ -22,7 +22,7 @@ public class icyHot
   }
   public static void main(String[] args)
   {
-    testicyHot(101, -18, false);
+    testicyHot(101, -18, true);
     testicyHot(-57, 139, true);
   }
 }

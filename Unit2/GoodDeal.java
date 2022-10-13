@@ -18,6 +18,6 @@ public class GoodDeal{
   }
   public static void main(String[] args){
     testGoodDeal(100, 75);
-    testGoodDeal(50, 40);
+    testGoodDeal(50, 37.5);
   }
 }

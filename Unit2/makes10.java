@@ -22,6 +22,6 @@ public class makes10
   {
     testmakes10(6,10,true);
     testmakes10(3,7, true);
-    testmakes10(2,5, false);
+    testmakes10(10, 0, true);
   }
 }
