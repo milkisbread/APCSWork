@@ -1,12 +1,18 @@
 public class attention
 {
-  public static void Attention(String str){
-    boolean result = shout(str);
+  public static void testAttention(String str){
+    boolean result = attention(str);
     System.out.println(result);
+
+    if (result == true){
+      System.out.println(str);
+    }else{
+      System.out.println("Hey!");
+    }
   }
 
-  public static boolean shout(String str){
-    if(str.length() >= 8 && str.substring(0,9).equals("Hey, you!")){
+  public static boolean attention(String str){
+    if(str.substring(0,9).equals("Hey, you!")){
       return true;
     }else{
       return false;
@@ -14,7 +20,7 @@ public class attention
   }
 
   public static void main(String[] args){
-    Attention("Hey, you! Stop talking in class!");
-    Attention("Hey, you! Don't run in the hallways!");
+    testAttention("Hey, you! Stop talking in class!");
+    testAttention("Hey, you! Don't run in the hallways!");
   }
 }
