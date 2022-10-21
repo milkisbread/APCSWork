@@ -2,7 +2,7 @@ public class attention
 {
   public static void testAttention(String str){
     boolean result = attention(str);
-    System.out.println(result);
+    System.out.println("shout: " + str + " hey?: " + result);
 
     if (result == true){
       System.out.println(str);

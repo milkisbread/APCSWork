@@ -2,6 +2,7 @@ public class mixStart
 {
   public static void testixStart(String str){
     boolean result = ixStart(str);
+    System.out.println("str: " + str + "ix? " + result);
 
     if(result == true){
       System.out.println(str + result);
