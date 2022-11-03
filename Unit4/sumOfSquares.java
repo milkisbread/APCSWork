@@ -2,7 +2,7 @@ public class sumOfSquares{
 
   public static void testSumSquares(int n, int expected){
     int outcome = SumSquares(n);
-    System.out.println(expected + " " + outcome);
+    System.out.println(n + " " + expected + " " + outcome);
 
     if(expected == outcome){
       System.out.println("It's equal!");

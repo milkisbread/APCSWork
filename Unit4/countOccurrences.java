@@ -2,12 +2,12 @@ public class countOccurrences{
 
   public static void testcountOccur(String str, int expected){
     int outcome = countOccur(str);
-    System.out.println(expected + " " + outcome);
+    System.out.println(str + " " + expected + " " + outcome);
 
     if(expected == outcome){
-      System.out.println("Repeats");
+      System.out.println("Repeats ma " + outcome + " times");
     }else{
-      System.out.println("Doesn't Repeat");
+      System.out.println("Doesn't Repeat ma " + outcome + " times");
     }
   }
 
