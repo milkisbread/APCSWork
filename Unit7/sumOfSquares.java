@@ -2,7 +2,12 @@ public class sumOfSquares{
 
   public static void testSumSquares(double[] nums, double expected){
     double outcome = sumSquares(nums);
-    System.out.println(" " + expected + " " + outcome);
+
+    System.out.println("values: ");
+    for(double num: nums){
+      System.out.println(num + " ");
+    }
+    System.out.println("expected: " + expected + " result: " + outcome);
 
     if(expected == outcome){
       System.out.println("It's equal!");
@@ -13,8 +18,8 @@ public class sumOfSquares{
 
   public static double sumSquares(double[] nums){
     double result = 0;
-    for(int i = 0; i <= nums.length; i++){
-      result = (nums[i]*nums[i]);
+    for(int i = 0; i < nums.length; i++){
+      result += (nums[i]*nums[i]);
     }
     return result;
   }

@@ -2,6 +2,10 @@ public class countLucky{
 
   public static void testLuck(int[] nums, int expected){
     int result = Lucky(nums);
+    System.out.println("values: ");
+    for(int num: nums){
+      System.out.println(num + " ");
+    }
     System.out.println("expected: " + expected + " result: " + result);
     if(expected == result){
       System.out.println("Yay!");

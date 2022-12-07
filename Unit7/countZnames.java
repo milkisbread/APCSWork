@@ -3,7 +3,11 @@ public class countZnames{
   public static void testcountZ(String[] words, double expected){
 
     double result = countZ(words);
-    System.out.println("expected: " + expected + " result: " + result);
+    System.out.print("words: ");
+    for(String word: words){
+      System.out.println(word + " ");
+    }
+    System.out.println("expected z's: " + expected + " result: " + result);
 
     if(expected == result){
       System.out.println("It's equal!");
