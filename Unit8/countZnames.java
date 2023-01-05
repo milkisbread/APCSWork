@@ -7,7 +7,7 @@ public class countZnames{
     double result = countZ(words);
     System.out.print("words: ");
     for(String word: words){
-      System.out.println(word + " ");
+      System.out.println(word + " ");]
     }
     System.out.println("expected length: " + expected + " result: " + result);
 
