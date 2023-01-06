@@ -6,10 +6,10 @@ public class PersonStats{
     float result = AveragePets(people);
     System.out.println("list: ");
     for(Person p: people){
-      System.out.println(p.getName() + " number of pets:" + p.getPets());
+      System.out.println("Name: " + p.getName() + "; Number of pets:" + p.getPets());
     }
 
-    System.out.println("expected: " + expected + " result: " + result);
+    System.out.println("expected average: " + expected + " average result: " + result);
     if(expected == result){
       System.out.println("Yay!");
     }else{
@@ -25,16 +25,24 @@ public class PersonStats{
     return total/people.size();
   }
 
-  public static String mostPets(ArrayList<Person> people){
+  public static int mostPets(ArrayList<Person> people){
+    int result = 0;
     for(Person p: people){
-      int result = 0;
       for(int i = 0; i < people.size(); i++){
           result = Math.max(p.getPets(), p.getPets());
-        }
-      if(p.getPets() >= result){
-        return p.getName();
       }
     }
+    return result;
+  }
+
+  public static String mostName(ArrayList<Person> people){
+    String pets = " ";
+    for(Person p: people){
+      if(p.getPets() >= mostPets(people)){
+        pets = p.getName();
+      }
+    }
+    return pets;
   }
 
   public static void main(String args[]){
@@ -47,7 +55,8 @@ public class PersonStats{
     PersonStatsTest(people, 3);
 
     System.out.println("average number of pets: " + AveragePets(people));
-    System.out.println("person with the most pets" + mostPets(people));
+    System.out.println("most pets: " + mostPets(people));
+    System.out.println("person with the most number of pets: " + mostName(people));
   }
 
 }
