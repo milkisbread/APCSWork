@@ -26,6 +26,26 @@ public class ItemCalculator{
     return total/things.size();
   }
 
+  public static float mostExpensive(ArrayList<Item> things){
+    float result = 0;
+    for(Item t: things){
+      for(int i = 0; i < things.size(); i++){
+          result = Math.max(t.getPrice(), t.getPrice());
+      }
+    }
+    return result;
+  }
+
+  public static String expensiveItem(ArrayList<Item> things){
+    String pricey = "";
+    for(Item t: things){
+      if(t.getPrice() >= mostExpensive(things)){
+        pricey = t.getName();
+      }
+    }
+    return pricey;
+  }
+
   public static void main(String args[]){
     ArrayList<Item> things = new ArrayList<Item>();
 
@@ -35,6 +55,7 @@ public class ItemCalculator{
     testItemCalculator(things, 3.5);
 
     System.out.println("average price of items: " + averagePrice(things));
+    System.out.println("most expensive item: " + expensiveItem(things));
   }
 
 }

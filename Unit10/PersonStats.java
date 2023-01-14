@@ -45,6 +45,16 @@ public class PersonStats{
     return pets;
   }
 
+  public static ArrayList<Person> atLeast(ArrayList<Person> people){
+    ArrayList<Person> result = new ArrayList<Person>();
+    for(Person p: people){
+        if (p.getPets() >= 2){
+          result.add(p);
+        }
+    }
+    return result;
+  }
+
   public static void main(String args[]){
     ArrayList<Person> people = new ArrayList<Person>();
 
@@ -57,6 +67,12 @@ public class PersonStats{
     System.out.println("average number of pets: " + AveragePets(people));
     System.out.println("most pets: " + mostPets(people));
     System.out.println("person with the most number of pets: " + mostName(people));
+    System.out.println("has at least 2 pets: ");
+
+    ArrayList<Person> result = atLeast(people);
+    for (Person p : result){
+      System.out.println(p.getName());
+    }
   }
 
 }
