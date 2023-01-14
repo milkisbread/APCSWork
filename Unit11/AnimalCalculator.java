@@ -6,9 +6,9 @@ public class AnimalCalculator{
     int result = 0;
 
     for(Animal a: animals){
-      result += a.legCount() / animals.size();
+      result += a.legCount();
     }
-    return result;
+    return result/animal.size();
 
   }
 
