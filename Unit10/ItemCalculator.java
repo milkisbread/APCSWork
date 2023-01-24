@@ -26,7 +26,7 @@ public class ItemCalculator{
     return total/things.size();
   }
 
-  public static float mostExpensive(ArrayList<Item> things){
+/*  public static float mostExpensive(ArrayList<Item> things){
     float result = 0;
     for(Item t: things){
       for(int i = 0; i < things.size(); i++){
@@ -44,6 +44,17 @@ public class ItemCalculator{
       }
     }
     return pricey;
+  }
+  */
+
+  public static String expensiveItem(ArrayList<Item> things){
+    Item tMax = things.get(0);
+    for (Item t: things){
+      if(t.getPrice() > tMax.getPrice()){
+        tMax = t;
+      }
+    }
+    return tMax.getName();
   }
 
   public static void main(String args[]){

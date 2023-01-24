@@ -4,13 +4,33 @@ public class AnimalCalculator{
 
   public static int AverageLegs(ArrayList<Animal> animals){
     int result = 0;
-
     for(Animal a: animals){
-      result += a.legCount();
+      result += a.getLegCount();
     }
-    return result/animal.size();
-
+    return result/animals.size();
   }
+
+  /* public static int fewestLegs(ArrayList<Animal> animals){
+    int result = 0;
+    for(Animal a: animals){
+      for(int i = 0; i < animals.size(); i++){
+          result = Math.min(a.getLegCount(), a.getLegCount());
+      }
+    }
+    return result;
+  }
+*/
+
+  public static String leastLeggedAnimal(ArrayList<Animal> animals){
+    Animal amin = animals.get(0);
+    for (Animal a: animals){
+      if(a.getLegCount() < amin.getLegCount()){
+        amin = a;
+      }
+    }
+    return amin.getName();
+  }
+
 
   public static void main(String[] args){
     Human Hooman = new Human("Human", 2, false);
@@ -32,6 +52,9 @@ public class AnimalCalculator{
       animals.add(Kat);
       animals.add(Spunge);
       animals.add(Centeepeed);
+
+    System.out.println("average amount of legs: " + AverageLegs(animals));
+    System.out.println("animal with the fewest legs: " + leastLeggedAnimal(animals));
 
   }
 }

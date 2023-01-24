@@ -6,6 +6,14 @@ public class Animal{
     this.furriness = furriness;
   }
 
+  public String getName(){
+    return name;
+  }
+
+  public int getLegCount(){
+    return legCount;
+  }
+
   public String name;
   public int legCount;
   public boolean furriness;

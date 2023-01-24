@@ -25,6 +25,7 @@ public class PersonStats{
     return total/people.size();
   }
 
+/*
   public static int mostPets(ArrayList<Person> people){
     int result = 0;
     for(Person p: people){
@@ -43,6 +44,17 @@ public class PersonStats{
       }
     }
     return pets;
+  }
+  */
+
+  public static String mostName(ArrayList<Person> people){
+    Person pMax = people.get(0);
+    for(Person p: people){
+      if(p.getPets() > pMax.getPets()){
+        pMax = p;
+      }
+    }
+    return pMax.getName();
   }
 
   public static ArrayList<Person> atLeast(ArrayList<Person> people){
@@ -65,7 +77,7 @@ public class PersonStats{
     PersonStatsTest(people, 3);
 
     System.out.println("average number of pets: " + AveragePets(people));
-    System.out.println("most pets: " + mostPets(people));
+    //System.out.println("most pets: " + mostPets(people));
     System.out.println("person with the most number of pets: " + mostName(people));
     System.out.println("has at least 2 pets: ");
 
