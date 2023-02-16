@@ -45,51 +45,27 @@ public class ArrayInitialization{
            System.out.println();
          }
 
-/*
-         System.out.println("numbers for loop: ");
-         for(int i = 0; i<numbers.length; i++){
-           for(int j = 0; j < numbers[i].length; j++){
-             System.out.println(numbers[i][j] + " ");
-           }
-           System.out.println();
+         int c = 5;
+         int[][] numbers = new int[c][c];
+         System.out.println("Array of Doubles:");
+         for (int i=0; i<c; i++){
+             for (int j=0; j < c; j++){
+              numbers[i][j] = ((i+1)*10) + j+1;
+              System.out.print(numbers[i][j]);
+             }
+             System.out.println();
          }
-*/
-         int[] values = {1, 3, 5, 7};
 
-       for (int value: values)
-           System.out.print(value + " ");
-       System.out.println();
-
-
-       int[][] numbers = { {1, 3, 5}, {2, 4}, {9} };
-
-       System.out.println("numbers[0][2]: " +  numbers[0][2]);
-
-
-       // print all numbers (for each loop)
-
-       System.out.println("numbers:");
-
-       for (int[] row : numbers)
-       {
-           for (int value : row)
-           {
-               System.out.print(value + " ");
-           }
-           System.out.println();
-       }
-
-       // for loop
-
-       System.out.println("numbers (for loop):");
-
-       for (int i=0; i<numbers.length; i++)
-       {
-           for (int j=0; j < numbers[i].length; j++)
-           {
-               System.out.print(numbers[i][j] + " ");
-           }
-           System.out.println();
+       int b = 6;
+       int h = 5;
+       int[][] cell = new int[b][h];
+       System.out.println("Array of Integers:");
+       for (int i=0; i < b; i++){
+           for (int j=0; j < h; j++){
+               cell[i][j] = i+1;
+               System.out.print(cell[i][j]);
+              }
+          System.out.println();
        }
      }
 
