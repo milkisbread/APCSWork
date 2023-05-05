@@ -3,8 +3,9 @@ import java.util.*;
 
 public class FruitNinja extends PApplet{
 
+  PImage wood;
   public void settings(){
-    size(800, 800);
+    fullScreen();
   }
 
   public void setup(){
@@ -36,6 +37,7 @@ public class FruitNinja extends PApplet{
     for(Fruit fruit : fruits){
       fruit.display();
     }*/
+    
   }
 
   public void keyPressed(){
